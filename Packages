@@ -1,18 +1,3 @@
-Package: com.adskip.atunblock
-Name: AutoTouch 微信解锁
-Version: 1.0.0
-Architecture: iphoneos-arm64
-Description: 运行时 hook 解除 AutoTouch 对微信的硬编码限制，不改动 ATTweak.dylib 本体。
-Maintainer: Abobo
-Author: Abobo
-Section: Tweaks
-Depends: ellekit, firmware (>= 15.0)
-Depiction: https://abobo-win.github.io/wechat-adskip/depiction.html
-Filename: debs/com.adskip.atunblock_1.0.0_iphoneos-arm64.deb
-Size: 5612
-MD5sum: 45fa213e886c23d43494d3fbecb94baf
-SHA256: ea39a31024533e940cb79b1b8ae99686a33657ad179dd44c97de87929a3168a2
-
 Package: com.adskip.wxgame
 Name: 微信小游戏去广告
 Version: 1.0.1

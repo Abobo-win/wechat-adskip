@@ -7,12 +7,12 @@ Architectures: iphoneos-arm64
 Components: main
 Description: 微信小游戏去广告 · AutoTouch 微信解锁 · 永久免费
 MD5Sum:
- 49191e7c2ef853dc72ac04018ac041e5 1457 Packages
- f48a30d39b5e7c15e08e65774c70888b 893 Packages.gz
- 83aa5ea76d480d87f542d25e7fbb721a 987 Packages.bz2
- fc8f771eca9ee789a69918e79874973f 896 Packages.xz
+ cd9cf34a8165c99ef02c2fdd63824b87 905 Packages
+ 461cd034d1962bff15d00d24147a89d9 705 Packages.gz
+ 6671ef04c672aabf587fbd8a0bbcb952 770 Packages.bz2
+ 95552f82b82de0bcfbc18a9b4eec22cc 724 Packages.xz
 SHA256:
- 6c43ba3e0a9670ea5fca70cc6136a5559c664a4147309fc7ad86950ab76cab7c 1457 Packages
- 7a2a9bd052c12581a9dbc8d54481ee96fa85d56bd026373fb7d4bc23ea0fd158 893 Packages.gz
- 0c107e13c5bf5cf75983e9107aff2aa422c156e6941c01ca05ac878a83559fe8 987 Packages.bz2
- 78c6872b73bd0916219234dc63e6c3e621614d12423754057b07671b92e16b26 896 Packages.xz
+ 646c6dddc2f4bc0c209c8ef47f7cc05a462ed0aa9f31e3e5873bf2356e58b832 905 Packages
+ 11b27eafa048b3077383cea0f12f9d75aa5cc90d9d5fb92789e6c30abd903124 705 Packages.gz
+ 540cf29beacb21e84d4e4678509aefa13aebd6d6d7ea349c2f43c1ad5ffa0c75 770 Packages.bz2
+ 187450bef8d833cb143c41f1718cf02d2daa96eefa9a37e498a55fb62c2fcb4e 724 Packages.xz
