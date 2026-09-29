@@ -1,0 +1,14 @@
+# 强制 LF —— Windows 上 git 默认会把 LF 转成 CRLF，
+# 那会让 Packages 的字节数变化，SHA256 与 Release 声明的不一致，
+# Sileo 校验失败就拒绝加载整个源
+*.sh      text eol=lf
+Packages  text eol=lf
+Release   text eol=lf
+*.md      text eol=lf
+*.html    text eol=lf
+
+# 二进制文件不要做任何转换（转换会破坏哈希校验）
+*.deb     binary
+*.gz      binary
+*.bz2     binary
+*.xz      binary

@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>微信小游戏去广告</title>
+<style>
+  :root { --fg:#1c1c1e; --sub:#6b6b70; --card:#ffffff; --bg:#f2f2f7; --accent:#0a84ff; }
+  @media (prefers-color-scheme: dark) {
+    :root { --fg:#f2f2f7; --sub:#9a9aa0; --card:#1c1c1e; --bg:#000000; --accent:#0a84ff; }
+  }
+  * { box-sizing: border-box; }
+  body {
+    margin:0; padding:16px 16px 48px;
+    font: -apple-system-body, -apple-system, "PingFang SC", "Helvetica Neue", sans-serif;
+    background: var(--bg); color: var(--fg);
+    -webkit-text-size-adjust: 100%;
+  }
+  h1 { font-size: 26px; margin: 8px 0 4px; }
+  h2 { font-size: 17px; margin: 28px 0 10px; color: var(--sub); font-weight: 600;
+       text-transform: uppercase; letter-spacing: .04em; }
+  p, li { font-size: 16px; line-height: 1.6; }
+  .sub { color: var(--sub); font-size: 15px; margin: 0 0 20px; }
+  .card { background: var(--card); border-radius: 14px; padding: 16px; margin: 12px 0; }
+  code {
+    font-family: ui-monospace, SFMono-Regular, Menlo, monospace;
+    font-size: 13px; background: rgba(127,127,127,.15);
+    padding: 2px 6px; border-radius: 5px;
+  }
+  pre {
+    background: rgba(127,127,127,.12); padding: 12px; border-radius: 10px;
+    overflow-x: auto; font-size: 13px; line-height: 1.5;
+  }
+  table { width: 100%; border-collapse: collapse; font-size: 15px; }
+  td { padding: 8px 0; border-bottom: 1px solid rgba(127,127,127,.18); vertical-align: top; }
+  td:first-child { color: var(--sub); width: 38%; }
+  tr:last-child td { border-bottom: none; }
+  .ok  { color: #30d158; font-weight: 600; }
+  .no  { color: #ff453a; font-weight: 600; }
+  ul { padding-left: 20px; }
+</style>
+</head>
+<body>
+
+<h1>微信小游戏去广告</h1>
+<p class="sub">跳过小游戏的激励视频广告 · 广告不播放 · 奖励直接到账</p>
+
+<div class="card">
+  <table>
+    <tr><td>版本</td><td>AutoTouch 微信解锁 1.0.0, 微信小游戏去广告 1.0.1</td></tr>
+    <tr><td>适用系统</td><td>iOS 15.0 – 16.6.1（rootless 越狱）</td></tr>
+    <tr><td>依赖</td><td>ellekit · preferenceloader</td></tr>
+    <tr><td>设置开关</td><td>系统设置 → 小游戏去广告</td></tr>
+  </table>
+</div>
+
+<h2>它是怎么工作的</h2>
+
+<div class="card">
+  <p><b>先说结论：微信把小游戏广告从原生层搬走了。</b></p>
+  <p>以前小游戏的激励视频走原生 SDK，所以 hook ObjC 的插件（老猫助手、GDDTHookByX、NoPublicAds……）都能拦。后来微信改成了：</p>
+  <pre>运行时下载 https://lib/WAGameAd.js（约 1.58MB 纯 JS）
+→ 在 JS 引擎里求值
+→ 广告逻辑全在这个 JS 库里</pre>
+  <p>这就是为什么<b>所有传统去广告插件同时失效</b>——不是插件坏了，是<b>广告搬家了</b>。</p>
+</div>
+
+<div class="card">
+  <p><b>本插件的做法：</b>hook JS 引擎的求值入口 <code>JSContext2</code>，在广告库执行<b>之前</b>改写源码字符串。</p>
+  <table>
+    <tr>
+      <td>改哪里</td>
+      <td><code>dB()</code> 里的免播卡检查<br>
+          <code>if(!FE.isWaGame||!y.videoSkipCard)return null;</code></td>
+    </tr>
+    <tr>
+      <td>改成什么</td>
+      <td>直接返回 <code>{skipResult:"skip"}</code></td>
+    </tr>
+    <tr>
+      <td>为什么有效</td>
+      <td>调用方 <code>uB()</code> 里 <code>if(o) return void e(o);</code> 立刻短路<br>
+          → 广告根本不播，游戏直接收到 <code>isEnded:true</code></td>
+    </tr>
+    <tr>
+      <td>安全性</td>
+      <td>只改内存字符串，<b>不动磁盘文件</b>，不触发微信的资源完整性校验</td>
+    </tr>
+  </table>
+</div>
+
+<h2>两个技术难点</h2>
+
+<div class="card">
+  <p><b>难点 1：入口不是系统的 <code>JSContext</code></b></p>
+  <p>是微信自编译 JavaScriptCore2 里的 <code>JSContext2</code>。主二进制里搜 <code>createRewardedVideoAd</code> 是 <b>0 次</b>。</p>
+
+  <p style="margin-top:18px"><b>难点 2：微信会运行时替换实现</b></p>
+  <p>实测日志：</p>
+  <pre>已给实现打补丁 (第 1 个)  地址 = 0x1253c3c84
+已给实现打补丁 (第 2 个)  地址 = 0x1168512c0   ← 微信换了</pre>
+  <p>只打一次补丁会被<b>静默绕过</b>——广告照播，看不出哪里错了。本插件会跟随切换，但<b>每个地址只打一次补丁</b>（重复改方法表会导致竞态崩溃）。</p>
+</div>
+
+<h2>设置开关</h2>
+<div class="card">
+  <p>安装后去 <b>系统设置 → 往下翻 → 「小游戏去广告」</b>。</p>
+  <p>开关改动后需要<b>重启微信</b>才生效。</p>
+  <p>如果设置里找不到，<b>respring（重启桌面）</b>一次——PreferenceLoader 只在桌面启动时扫描。</p>
+</div>
+
+<h2>已知限制</h2>
+<div class="card">
+  <ul>
+    <li>如果某个小游戏的开奖由<b>服务端校验</b>，客户端补丁可能拿不到奖励</li>
+    <li>微信以后改 <code>WAGameAd.js</code> 的结构会导致补丁失效——改一下正则即可</li>
+  </ul>
+</div>
+
+<p style="color:var(--sub); font-size:13px; margin-top:32px; text-align:center;">
+  仅供学习交流 · 自用插件
+</p>
+
+</body>
+</html>

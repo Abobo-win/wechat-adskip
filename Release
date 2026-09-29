@@ -1,0 +1,18 @@
+Origin: abobo
+Label: Abobo 的源
+Suite: stable
+Version: 1.0
+Codename: ios
+Architectures: iphoneos-arm64
+Components: main
+Description: 微信小游戏去广告 · AutoTouch 微信解锁 · 永久免费
+MD5Sum:
+ ae3488bcc770e4bedc7e1a0b74392e5f 1455 Packages
+ befd335f2dbef68b49b3091b51a6a9b5 893 Packages.gz
+ c0a361ae56155d221e7895ff00699197 984 Packages.bz2
+ 2f3353fb64482c4742ba3c54d27766aa 896 Packages.xz
+SHA256:
+ c5d427fed4f09a0074a6bf70afbb677fc7a35d1ed04c68e71ca08bd94cd3f5cf 1455 Packages
+ 75c72008d34041f481158896f1885ae7c74597ff1d3c71f58ca1d07dbc55c24e 893 Packages.gz
+ 18c92207b02bc1803438e95111209b0e76655f1e4c5c4883d324ed2c5c494b1b 984 Packages.bz2
+ fe5d24bd22a0a00119c68feade0cf27a0504bf3273c9c9765d33c2200a3282e1 896 Packages.xz

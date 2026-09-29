@@ -1,0 +1,34 @@
+Package: com.adskip.atunblock
+Name: AutoTouch 微信解锁
+Version: 1.0.0
+Architecture: iphoneos-arm64
+Description: 运行时 hook 解除 AutoTouch 对微信的硬编码限制，不改动 ATTweak.dylib 本体。
+Maintainer: Abobo
+Author: Abobo
+Section: Tweaks
+Depends: ellekit, firmware (>= 15.0)
+Depiction: https://aboo-win.github.io/wechat-adskip/depiction.html
+Filename: debs/com.adskip.atunblock_1.0.0_iphoneos-arm64.deb
+Size: 5612
+MD5sum: 45fa213e886c23d43494d3fbecb94baf
+SHA256: ea39a31024533e940cb79b1b8ae99686a33657ad179dd44c97de87929a3168a2
+
+Package: com.adskip.wxgame
+Name: 微信小游戏去广告
+Version: 1.0.1
+Architecture: iphoneos-arm64
+Description: 跳过微信小游戏的激励视频广告，广告不播放、奖励直接到账。
+ 小游戏的广告代码是运行时下载的纯 JS 库（WAGameAd.js），不在原生层，
+ 所以传统的 ObjC 去广告插件全都失效了。
+ 本插件 hook 的是 JS 引擎的求值入口（JSContext2），
+ 在广告库执行前改写源码字符串，只改内存不落盘。
+ 带设置开关（系统设置 → 小游戏去广告）。
+Maintainer: Abobo
+Author: Abobo
+Section: Tweaks
+Depends: ellekit, firmware (>= 15.0), preferenceloader
+Depiction: https://aboo-win.github.io/wechat-adskip/depiction.html
+Filename: debs/com.adskip.wxgame_1.0.1_iphoneos-arm64.deb
+Size: 10196
+MD5sum: 6017cc1ae5817c6f0d965466188ab396
+SHA256: a820177b12d9dab995fa0080918de1f81e1deef37b6ed2689a3bbd5348949285
