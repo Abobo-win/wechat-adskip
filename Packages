@@ -7,7 +7,7 @@ Maintainer: Abobo
 Author: Abobo
 Section: Tweaks
 Depends: ellekit, firmware (>= 15.0)
-Depiction: https://aboo-win.github.io/wechat-adskip/depiction.html
+Depiction: https://abobo-win.github.io/wechat-adskip/depiction.html
 Filename: debs/com.adskip.atunblock_1.0.0_iphoneos-arm64.deb
 Size: 5612
 MD5sum: 45fa213e886c23d43494d3fbecb94baf
@@ -27,7 +27,7 @@ Maintainer: Abobo
 Author: Abobo
 Section: Tweaks
 Depends: ellekit, firmware (>= 15.0), preferenceloader
-Depiction: https://aboo-win.github.io/wechat-adskip/depiction.html
+Depiction: https://abobo-win.github.io/wechat-adskip/depiction.html
 Filename: debs/com.adskip.wxgame_1.0.1_iphoneos-arm64.deb
 Size: 10196
 MD5sum: 6017cc1ae5817c6f0d965466188ab396

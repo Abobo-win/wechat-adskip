@@ -39,7 +39,7 @@
 ```
 Sileo → 源 → 右上角 + → 添加：
 
-https://Aboo-win.github.io/wechat-adskip/
+https://Abobo-win.github.io/wechat-adskip/
 
 → 进「小游戏去广告」→ 安装
 ```
