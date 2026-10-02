@@ -4,7 +4,33 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>定位修改</title>
-
+<style>
+:root{--fg:#1c1c1e;--sub:#6b6b70;--card:#fff;--bg:#f2f2f7;--accent:#0a84ff;--line:rgba(127,127,127,.18)}
+@media (prefers-color-scheme:dark){:root{--fg:#f2f2f7;--sub:#9a9aa0;--card:#1c1c1e;--bg:#000;--line:rgba(127,127,127,.28)}}
+*{box-sizing:border-box}
+body{margin:0;padding:0 16px 40px;background:var(--bg);color:var(--fg);
+ font:16px/1.6 -apple-system,"PingFang SC","Helvetica Neue",sans-serif;-webkit-text-size-adjust:100%}
+.hd{display:flex;align-items:center;gap:14px;padding:22px 0 6px}
+.hd img{width:76px;height:76px;border-radius:17px;box-shadow:0 6px 18px rgba(0,0,0,.18)}
+.hd h1{font-size:22px;margin:0 0 4px}
+.hd p{margin:0;color:var(--sub);font-size:14px}
+h2{font-size:15px;margin:26px 0 8px;color:var(--sub);font-weight:600;letter-spacing:.06em}
+.card{background:var(--card);border-radius:14px;padding:14px 16px}
+table{width:100%;border-collapse:collapse;font-size:15px}
+td{padding:9px 0;border-bottom:1px solid var(--line);vertical-align:top}
+td:first-child{color:var(--sub);width:34%}
+tr:last-child td{border-bottom:none}
+ul,ol{margin:0;padding-left:20px}
+li{margin:6px 0}
+.lim li::marker{color:#ff9f0a}
+.ver{display:flex;justify-content:space-between;gap:10px;padding:8px 0;border-bottom:1px solid var(--line);font-size:15px}
+.ver:last-child{border-bottom:none}
+.ver b{font-weight:600}
+.ver span{color:var(--sub);white-space:nowrap}
+.ft{margin-top:30px;color:var(--sub);font-size:13px;text-align:center;line-height:1.8}
+.badge{display:inline-block;padding:1px 8px;border-radius:9px;background:rgba(10,132,255,.14);
+ color:var(--accent);font-size:12px;margin-left:6px;vertical-align:2px}
+</style>
 </head>
 <body>
 <div class="hd">

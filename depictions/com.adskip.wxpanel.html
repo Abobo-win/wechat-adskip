@@ -3,7 +3,7 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>微信小游戏去广告</title>
+<title>微信小游戏去广告 · 设置面板</title>
 <style>
 :root{--fg:#1c1c1e;--sub:#6b6b70;--card:#fff;--bg:#f2f2f7;--accent:#0a84ff;--line:rgba(127,127,127,.18)}
 @media (prefers-color-scheme:dark){:root{--fg:#f2f2f7;--sub:#9a9aa0;--card:#1c1c1e;--bg:#000;--line:rgba(127,127,127,.28)}}
@@ -34,52 +34,53 @@ li{margin:6px 0}
 </head>
 <body>
 <div class="hd">
-  <img src="https://abobo-win.github.io/wechat-adskip/icons/com.adskip.wxgame.png" alt="">
+  <img src="https://abobo-win.github.io/wechat-adskip/icons/com.adskip.wxpanel.png" alt="">
   <div>
-    <h1>微信小游戏去广告<span class="badge">v1.0.2</span></h1>
-    <p>小游戏里「看广告得奖励」的那些广告，不用再看了</p>
+    <h1>微信小游戏去广告 · 设置面板<span class="badge">v1.0.1</span></h1>
+    <p>配套 App：一个开关 + 看得见的真实状态</p>
   </div>
 </div>
 
 <h2>基本信息</h2>
 <div class="card"><table>
-<tr><td>版本</td><td>1.0.2</td></tr>
+<tr><td>版本</td><td>1.0.1</td></tr>
 <tr><td>更新日期</td><td>2026-10-02</td></tr>
 <tr><td>系统要求</td><td>iOS 15 及以上（越狱环境，rootless）</td></tr>
 <tr><td>实测环境</td><td>iPhone 13 Pro · iOS 15.6.1 · 微信 8.0.72</td></tr>
-<tr><td>设置入口</td><td>桌面上的「小游戏去广告」App（配套面板）</td></tr>
+<tr><td>配套插件</td><td>微信小游戏去广告（必须一起安装）</td></tr>
 <tr><td>价格</td><td>免费</td></tr>
 </table></div>
 
 <h2>功能</h2>
 <div class="card"><ul>
-<li>小游戏里「看广告得奖励 / 看广告复活 / 看广告翻倍」这类广告不再播放，奖励照常到账</li>
-<li>开关在配套的「小游戏去广告」App 里，随时可以关掉；关掉后就是微信原本的样子</li>
-<li>卸载即恢复，不会在微信里留下改动</li>
-<li>不需要注册、不需要联网验证</li>
+<li>一个大开关：想跳过就打开，不想跳过就关掉 —— 关掉后就是微信原本的样子</li>
+<li>显示真实运行状态：插件有没有在工作、今天生效了几次、最近一次是什么时候</li>
+<li>开关没落到实处、或者读不到状态时会直接说明，不会假装一切正常</li>
+<li>一键复制诊断信息，反馈问题时发给作者就行</li>
+<li>不联网、不上传任何数据；诊断信息只存在本机，由你自己复制导出</li>
 </ul></div>
 
 <h2>怎么用</h2>
 <div class="card"><ol>
 <li>确认设备已越狱（iOS 15 及以上，rootless 环境）</li>
-<li>在 Sileo 里安装本插件（源：abobo-win.github.io/wechat-adskip）</li>
-<li>安装配套的「微信小游戏去广告 · 设置面板」，桌面会出现「小游戏去广告」图标</li>
-<li>打开它把开关拨到你要的状态，然后把微信从后台彻底关掉，再重新打开</li>
+<li>在 Sileo 里安装本 App（会自动带上配套的「微信小游戏去广告」插件）</li>
+<li>桌面上会出现一个叫「小游戏去广告」的图标，点开它</li>
+<li>把开关拨到你要的状态；如果状态显示还没生效，把微信从后台彻底关掉再打开</li>
 </ol></div>
 
 <h2>需要注意</h2>
 <div class="card"><ul class="lim">
-<li>只覆盖小游戏里的激励视频广告；朋友圈、公众号文章、开屏这类广告不在范围内</li>
-<li>微信更新后可能失效。失效的表现就是「广告又开始播了」——先确认开关是开的、把微信重启一次；还是不行就等适配更新</li>
-<li>不同小游戏的广告流程不完全一样，少数游戏可能拿不到奖励</li>
-<li>个别游戏的开奖结果由服务器判定，这种情况下拿不到奖励属于正常现象</li>
+<li>只是控制面板：单独安装不会有任何效果，必须与「微信小游戏去广告」插件一起用</li>
+<li>只在 iOS 15.6.1 实测过，其它版本请自测</li>
+<li>桌面上的图标名与本页显示的包名不完全一样：图标叫「小游戏去广告」</li>
+<li>关掉之后小游戏广告会照常播放；重新打开后需要让微信重新读一次配置（把微信重启最稳）</li>
+<li>旧版在「设置」里提供的那个开关入口已经移除：开关只在本 App 里，免得两个入口说法不一致</li>
 </ul></div>
 
 <h2>更新日志</h2>
 <div class="card">
-<div class="ver"><b>v1.0.2</b><span>2026-10-02</span></div><div style="padding:0 0 10px;color:var(--sub);font-size:14px">修好开关：关掉之后小游戏广告会照常播放（修复上一版「关掉也仍然生效」的问题）；开关改到配套的「小游戏去广告」App 里</div>
-<div class="ver"><b>v1.0.1</b><span>2026-10-02</span></div><div style="padding:0 0 10px;color:var(--sub);font-size:14px">完善源内展示信息（名称 / 描述 / 分类 / 图标），功能不变</div>
-<div class="ver"><b>v1.0.0</b><span>2026-09-30</span></div><div style="padding:0 0 10px;color:var(--sub);font-size:14px">首个版本：跳过小游戏激励视频广告</div>
+<div class="ver"><b>v1.0.1</b><span>2026-10-02</span></div><div style="padding:0 0 10px;color:var(--sub);font-size:14px">处理「打开面板后界面卡住不动」的问题（实测口径：主线程不再被文件读写占住，老路径的每 3 秒 368 次文件访问已消除）；开关行为与设置项没有变化</div>
+<div class="ver"><b>v1.0.0</b><span>2026-10-02</span></div><div style="padding:0 0 10px;color:var(--sub);font-size:14px">首个版本：一键开关 + 运行状态 + 诊断信息导出</div>
 </div>
 
 <p class="ft">

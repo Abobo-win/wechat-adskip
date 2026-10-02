@@ -20,24 +20,47 @@ SHA256: 3d4c1891c13469021f4cbef9d5cdb1ef15da5280025c97501fe4df54c6a69307
 
 Package: com.adskip.wxgame
 Name: 微信小游戏去广告
-Version: 1.0.1
+Version: 1.0.2
 Architecture: iphoneos-arm64
 Description: 跳过微信小游戏里「看广告得奖励」这类广告：奖励直接到账，广告不播放。
  需要越狱（iOS 15 及以上，rootless），仅在 iOS 15.6.1 实测过。
- 装好后到「设置」里打开开关，重启微信生效。
- 只针对小游戏内的激励视频广告，其他类型的广告不受影响。
+ 开关改到桌面上的「小游戏去广告」App 里（配套面板）；旧版在「设置」里提供的那个开关入口已经移除。
+ 关掉后就是微信原本的样子；只针对小游戏内的激励视频广告，其他类型的广告不受影响。
  微信更新后可能失效，届时会跟进适配。
 Maintainer: Abobo
 Author: Abobo
 Section: Tweaks
 Depends: ellekit, firmware (>= 15.0), preferenceloader
+Recommends: com.adskip.wxpanel (>= 1.0.1)
 Homepage: https://abobo-win.github.io/wechat-adskip/
 Icon: https://abobo-win.github.io/wechat-adskip/icons/com.adskip.wxgame.png
 Depiction: https://abobo-win.github.io/wechat-adskip/depictions/com.adskip.wxgame.html
-Filename: debs/com.adskip.wxgame_1.0.1_iphoneos-arm64.deb
-Size: 10210
-MD5sum: 71b7e0274e15f5f75df5309549aed6f6
-SHA256: 038a13204144969f7783e930253499e1cd066a3fb9741e7502dbb489fe617703
+Filename: debs/com.adskip.wxgame_1.0.2_iphoneos-arm64.deb
+Size: 15828
+MD5sum: 0782595d95b95b12ef3568c160534bf0
+SHA256: 979188fd169ca33a401fc04ec12352f6ef07a20550de4fdd4bfa5e81b61b04ed
+
+Package: com.adskip.wxpanel
+Name: 微信小游戏去广告 · 设置面板
+Version: 1.0.1
+Architecture: iphoneos-arm64
+Description: 微信小游戏去广告的配套设置 App，也是控制开关的入口：装好后桌面上会多一个「小游戏去广告」图标。
+ 打开它就能一键跳过或恢复小游戏里的激励视频广告，
+ 还能看到插件有没有在工作、今天生效了几次、最近一次是什么时候。
+ 需要越狱（iOS 15 及以上，rootless），仅在 iOS 15.6.1 实测过。
+ 需要与「微信小游戏去广告」一起安装：单独装这个 App 不会有任何效果。
+ 不联网、不上传任何数据；诊断信息由你自己复制导出。
+Maintainer: Abobo
+Author: Abobo
+Section: Utilities
+Depends: firmware (>= 15.0), com.adskip.wxgame (>= 1.0.2)
+Homepage: https://abobo-win.github.io/wechat-adskip/
+Icon: https://abobo-win.github.io/wechat-adskip/icons/com.adskip.wxpanel.png
+Depiction: https://abobo-win.github.io/wechat-adskip/depictions/com.adskip.wxpanel.html
+Filename: debs/com.adskip.wxpanel_1.0.1_iphoneos-arm64.deb
+Size: 80242
+MD5sum: 75c7126c5a550ba36c94d7ccaf8803cd
+SHA256: 965188fb28946ea518cd8e82379466681d5e55affb17335328c3a0b4c1e41653
 
 Package: com.adskip.xgpsfake
 Name: 定位修改 · 控制台
