@@ -1,19 +1,60 @@
+Package: com.adskip.fakegpsc
+Name: 定位修改
+Version: 1.0.0
+Architecture: iphoneos-arm64
+Description: 把 iPhone 的定位改到指定地点，应用读到的坐标都与设定的地点一致。
+ 配合「定位修改 · 控制台」一起使用：地图选点、输入坐标、收藏地点、一键开始或暂停。
+ 需要越狱（iOS 15 及以上，rootless），仅在 iOS 15.6.1 实测过。
+ 请用于开发测试、位置隐私保护等正当用途，并遵守相关应用与平台的服务条款。
+Maintainer: Abobo
+Author: Abobo
+Section: Tweaks
+Depends: ellekit, firmware (>= 15.0)
+Homepage: https://abobo-win.github.io/wechat-adskip/
+Icon: https://abobo-win.github.io/wechat-adskip/icons/com.adskip.fakegpsc.png
+Depiction: https://abobo-win.github.io/wechat-adskip/depictions/com.adskip.fakegpsc.html
+Filename: debs/com.adskip.fakegpsc_1.0.0_iphoneos-arm64.deb
+Size: 9356
+MD5sum: 6f0a6a0aec44917e4985e746164c4c6a
+SHA256: 3d4c1891c13469021f4cbef9d5cdb1ef15da5280025c97501fe4df54c6a69307
+
 Package: com.adskip.wxgame
 Name: 微信小游戏去广告
 Version: 1.0.1
 Architecture: iphoneos-arm64
-Description: 跳过微信小游戏的激励视频广告，广告不播放、奖励直接到账。
- 小游戏的广告代码是运行时下载的纯 JS 库（WAGameAd.js），不在原生层，
- 所以传统的 ObjC 去广告插件全都失效了。
- 本插件 hook 的是 JS 引擎的求值入口（JSContext2），
- 在广告库执行前改写源码字符串，只改内存不落盘。
- 带设置开关（系统设置 → 小游戏去广告）。
+Description: 跳过微信小游戏里「看广告得奖励」这类广告：奖励直接到账，广告不播放。
+ 需要越狱（iOS 15 及以上，rootless），仅在 iOS 15.6.1 实测过。
+ 装好后到「设置」里打开开关，重启微信生效。
+ 只针对小游戏内的激励视频广告，其他类型的广告不受影响。
+ 微信更新后可能失效，届时会跟进适配。
 Maintainer: Abobo
 Author: Abobo
 Section: Tweaks
 Depends: ellekit, firmware (>= 15.0), preferenceloader
-Depiction: https://abobo-win.github.io/wechat-adskip/depiction.html
+Homepage: https://abobo-win.github.io/wechat-adskip/
+Icon: https://abobo-win.github.io/wechat-adskip/icons/com.adskip.wxgame.png
+Depiction: https://abobo-win.github.io/wechat-adskip/depictions/com.adskip.wxgame.html
 Filename: debs/com.adskip.wxgame_1.0.1_iphoneos-arm64.deb
-Size: 10196
-MD5sum: 6017cc1ae5817c6f0d965466188ab396
-SHA256: a820177b12d9dab995fa0080918de1f81e1deef37b6ed2689a3bbd5348949285
+Size: 10210
+MD5sum: 71b7e0274e15f5f75df5309549aed6f6
+SHA256: 038a13204144969f7783e930253499e1cd066a3fb9741e7502dbb489fe617703
+
+Package: com.adskip.xgpsfake
+Name: 定位修改 · 控制台
+Version: 1.0.0
+Architecture: iphoneos-arm64
+Description: 「定位修改」的配套 App（控制台）：地图选点、输入坐标、收藏常用地点，一键开始或暂停。
+ 需要与「定位修改」插件一起安装才会生效。
+ 需要越狱（iOS 15 及以上，rootless），仅在 iOS 15.6.1 实测过。
+ 请用于开发测试、位置隐私保护等正当用途，并遵守相关应用与平台的服务条款。
+Maintainer: Abobo
+Author: Abobo
+Section: Utilities
+Depends: firmware (>= 15.0)
+Homepage: https://abobo-win.github.io/wechat-adskip/
+Icon: https://abobo-win.github.io/wechat-adskip/icons/com.adskip.xgpsfake.png
+Depiction: https://abobo-win.github.io/wechat-adskip/depictions/com.adskip.xgpsfake.html
+Filename: debs/com.adskip.xgpsfake_1.0.0_iphoneos-arm64.deb
+Size: 176488
+MD5sum: 6c5eeedf607259af134bc196c91f26ac
+SHA256: c22199780f1e26dc76be71f8d34ceec7e521f41dd7a377616d070421eed85de6

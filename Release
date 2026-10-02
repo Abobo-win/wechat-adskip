@@ -1,18 +1,18 @@
 Origin: abobo
-Label: Abobo 的源
+Label: Abobo 源
 Suite: stable
 Version: 1.0
 Codename: ios
 Architectures: iphoneos-arm64
 Components: main
-Description: 微信小游戏去广告 · 永久免费
+Description: 越狱插件：微信小游戏去广告 · 定位修改｜免费使用，持续跟进适配
 MD5Sum:
- cd9cf34a8165c99ef02c2fdd63824b87 905 Packages
- debbb204b08f9d15f1c86c3562bc6c00 705 Packages.gz
- 6671ef04c672aabf587fbd8a0bbcb952 770 Packages.bz2
- 95552f82b82de0bcfbc18a9b4eec22cc 724 Packages.xz
+ 3d2667eb11f2ebf42e1854e7944897a1 2989 Packages
+ 48829d17a287c1750f5059ab4b597ba2 1258 Packages.gz
+ 1fde80b18581d696a60ceedd1eb3707e 1371 Packages.bz2
+ e7588e374e2fb737e9ca8cd0b2d41a58 1236 Packages.xz
 SHA256:
- 646c6dddc2f4bc0c209c8ef47f7cc05a462ed0aa9f31e3e5873bf2356e58b832 905 Packages
- 4b0e92932b4da7afaf110087b336d079bf49a78e098f77ddd853f98592fed2e1 705 Packages.gz
- 540cf29beacb21e84d4e4678509aefa13aebd6d6d7ea349c2f43c1ad5ffa0c75 770 Packages.bz2
- 187450bef8d833cb143c41f1718cf02d2daa96eefa9a37e498a55fb62c2fcb4e 724 Packages.xz
+ ab944e0b32f9aea9f9eaf8973d4545794d701c5c908cfa240f5410c33e997c8c 2989 Packages
+ da9c6f787476395bbc856f30a0f52cf9b4ab14fc8daccdaa9b0215da3451798c 1258 Packages.gz
+ 638ce124461f76248dc56de5d0da4ab63c9595af10e18ea722d99cd3ab8f8ea9 1371 Packages.bz2
+ 147d21fce41f4611a278e661d3788baf8bbb6aea2229a2d574386a8a938cb7d5 1236 Packages.xz
