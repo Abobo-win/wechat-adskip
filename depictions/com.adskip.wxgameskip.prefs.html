@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>微信小游戏去广告 · 设置入口</title>
+<style>
+:root{--fg:#1c1c1e;--sub:#6b6b70;--card:#fff;--bg:#f2f2f7;--accent:#0a84ff;--line:rgba(127,127,127,.18)}
+@media (prefers-color-scheme:dark){:root{--fg:#f2f2f7;--sub:#9a9aa0;--card:#1c1c1e;--bg:#000;--line:rgba(127,127,127,.28)}}
+*{box-sizing:border-box}
+body{margin:0;padding:0 16px 40px;background:var(--bg);color:var(--fg);
+ font:16px/1.6 -apple-system,"PingFang SC","Helvetica Neue",sans-serif;-webkit-text-size-adjust:100%}
+.hd{display:flex;align-items:center;gap:14px;padding:22px 0 6px}
+.hd img{width:76px;height:76px;border-radius:17px;box-shadow:0 6px 18px rgba(0,0,0,.18)}
+.hd h1{font-size:22px;margin:0 0 4px}
+.hd p{margin:0;color:var(--sub);font-size:14px}
+h2{font-size:15px;margin:26px 0 8px;color:var(--sub);font-weight:600;letter-spacing:.06em}
+.card{background:var(--card);border-radius:14px;padding:14px 16px}
+table{width:100%;border-collapse:collapse;font-size:15px}
+td{padding:9px 0;border-bottom:1px solid var(--line);vertical-align:top}
+td:first-child{color:var(--sub);width:34%}
+tr:last-child td{border-bottom:none}
+ul,ol{margin:0;padding-left:20px}
+li{margin:6px 0}
+.lim li::marker{color:#ff9f0a}
+.ver{display:flex;justify-content:space-between;gap:10px;padding:8px 0;border-bottom:1px solid var(--line);font-size:15px}
+.ver:last-child{border-bottom:none}
+.ver b{font-weight:600}
+.ver span{color:var(--sub);white-space:nowrap}
+.ft{margin-top:30px;color:var(--sub);font-size:13px;text-align:center;line-height:1.8}
+.badge{display:inline-block;padding:1px 8px;border-radius:9px;background:rgba(10,132,255,.14);
+ color:var(--accent);font-size:12px;margin-left:6px;vertical-align:2px}
+</style>
+</head>
+<body>
+<div class="hd">
+  <img src="https://abobo-win.github.io/wechat-adskip/icons/com.adskip.wxgameskip.prefs.png" alt="">
+  <div>
+    <h1>微信小游戏去广告 · 设置入口<span class="badge">v1.0.5</span></h1>
+    <p>在「设置」里就能开关，不用回桌面找 App</p>
+  </div>
+</div>
+
+<h2>基本信息</h2>
+<div class="card"><table>
+<tr><td>版本</td><td>1.0.5</td></tr>
+<tr><td>更新日期</td><td>2026-10-02</td></tr>
+<tr><td>系统要求</td><td>iOS 15 及以上（越狱环境，rootless）</td></tr>
+<tr><td>实测环境</td><td>iPhone 13 Pro · iOS 15.6.1 · 微信 8.0.72</td></tr>
+<tr><td>配套插件</td><td>微信小游戏去广告（必须一起安装）</td></tr>
+<tr><td>设置路径</td><td>设置 → 小游戏去广告</td></tr>
+<tr><td>价格</td><td>免费</td></tr>
+</table></div>
+
+<h2>功能</h2>
+<div class="card"><ul>
+<li>装完后「设置」里会多一项「小游戏去广告」，点进去就是开关</li>
+<li>同一页能看到真实状态：插件有没有在工作、今天生效了几次、最近一次是什么时候</li>
+<li>可以顺手刷新一次状态，不用来回切 App</li>
+<li>与桌面上的「小游戏去广告」App 共用同一份开关设置，两边显示一致</li>
+</ul></div>
+
+<h2>怎么用</h2>
+<div class="card"><ol>
+<li>确认设备已越狱（iOS 15 及以上，rootless 环境）</li>
+<li>在 Sileo 里安装本包（会自动带上配套的「微信小游戏去广告」插件）</li>
+<li>打开「设置」，往下找到「小游戏去广告」，点进去</li>
+<li>把开关拨到你要的状态；如果状态显示还没生效，把微信从后台彻底关掉再打开</li>
+</ol></div>
+
+<h2>需要注意</h2>
+<div class="card"><ul class="lim">
+<li>只是一个开关入口：单独安装不会有任何效果，必须与「微信小游戏去广告」插件一起用</li>
+<li>只在 iOS 15.6.1 实测过，其它版本请自测</li>
+<li>关掉之后小游戏广告会照常播放；重新打开后需要让微信重新读一次配置（把微信重启最稳）</li>
+<li>它和桌面上的「小游戏去广告」App 是同一种设置的两个入口：装哪个都行，两个都装也不冲突</li>
+</ul></div>
+
+<h2>更新日志</h2>
+<div class="card">
+<div class="ver"><b>v1.0.5</b><span>2026-10-02</span></div><div style="padding:0 0 10px;color:var(--sub);font-size:14px">首个发布版本：设置里的状态行 + 开关 + 刷新</div>
+</div>
+
+<p class="ft">
+  由 Abobo 维护 · 源地址 abobo-win.github.io/wechat-adskip<br>
+  仅供学习与研究使用 · 请遵守相关应用的服务条款
+</p>
+</body>
+</html>

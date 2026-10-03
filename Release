@@ -6,14 +6,14 @@ Codename: ios
 Architectures: iphoneos-arm64
 Components: main
 Description: 越狱插件：微信小游戏去广告 · 定位修改｜免费使用，持续跟进适配
-Date: Fri, 02 Oct 2026 16:04:31 +0000
+Date: Sat, 03 Oct 2026 01:49:41 +0000
 MD5Sum:
- a3d82b82e2356fb6312d57f116db7363 4360 Packages
- 7e7397aa0fe98905a29728953c09997f 1731 Packages.gz
- b0b8ce9d16cda89a42e668aadc792554 1815 Packages.bz2
- 1e51d289a3577885d91d6197f8e6141b 1672 Packages.xz
+ df0108a8123818c8f282dc49067544fb 5575 Packages
+ 6c8625a00e43cb5474da52d624e00dd8 1971 Packages.gz
+ 6cc9c8c32c173cedd7a441348ff85dd0 2077 Packages.bz2
+ 332a40c8da546b1ee701bcea639702f7 1884 Packages.xz
 SHA256:
- 198aa29c176fb9e2afa3ead50f164bb48e2bdcbb4d212baed7bf9395d0b84fb9 4360 Packages
- 6ae88df0ae9400b666a7beefb0aba5b6a64eed5e9f8971ac2d9fbb8ece0f13fd 1731 Packages.gz
- 58540e057a0e3cfea0fc3dbd9f84b16616c04f93b34b4f26c3d65aea1124be61 1815 Packages.bz2
- f636693c14a6e335b989c41f5b999e0fc49ef23a9088b7cc065fa2541d5e8b31 1672 Packages.xz
+ 99b8ee38095c674516ebdb672f6d17ceb3e0c810259d5ea13da853c655df7a89 5575 Packages
+ 3dbed128ff18d9d5c2a0fe943f1a62cc9842c65f80c9195ec79fe066ace31a7e 1971 Packages.gz
+ b3585aa2b0de92a26f3ac6cb61e61271134913520298dba888be73d80a3c7ff2 2077 Packages.bz2
+ b1ba527dd3b585085d652667edcdcd8f637de153f237de7edf66287caea54ddc 1884 Packages.xz

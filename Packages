@@ -40,6 +40,27 @@ Size: 15828
 MD5sum: 0782595d95b95b12ef3568c160534bf0
 SHA256: 979188fd169ca33a401fc04ec12352f6ef07a20550de4fdd4bfa5e81b61b04ed
 
+Package: com.adskip.wxgameskip.prefs
+Name: 微信小游戏去广告 · 设置入口
+Version: 1.0.5
+Architecture: iphoneos-arm64
+Description: 「设置」里的开关面板：装完后「设置」里会多一项「小游戏去广告」，点进去就能开关。
+ 同一页能看到插件的真实状态：有没有在工作、今天生效了几次、最近一次是什么时候。
+ 与桌面上的「小游戏去广告」App 共用同一份开关设置，两边显示一致。
+ 需要越狱（iOS 15 及以上，rootless），仅在 iOS 15.6.1 实测过。
+ 需要与「微信小游戏去广告」一起安装：单独装这个面板不会有任何效果。
+Maintainer: Abobo
+Author: Abobo
+Section: Utilities
+Depends: mobilesubstrate, firmware (>= 15.0), com.adskip.wxgame (>= 1.0.2)
+Homepage: https://abobo-win.github.io/wechat-adskip/
+Icon: https://abobo-win.github.io/wechat-adskip/icons/com.adskip.wxgameskip.prefs.png
+Depiction: https://abobo-win.github.io/wechat-adskip/depictions/com.adskip.wxgameskip.prefs.html
+Filename: debs/com.adskip.wxgameskip.prefs_1.0.5_iphoneos-arm64.deb
+Size: 18462
+MD5sum: dfffb61357c6e648a74f18d7b5f341f3
+SHA256: 4b2d91e0e9bab0bc0b55026c525864eb18e72340d0682a0bddf2a0eb28621d5d
+
 Package: com.adskip.wxpanel
 Name: 微信小游戏去广告 · 设置面板
 Version: 1.0.1
