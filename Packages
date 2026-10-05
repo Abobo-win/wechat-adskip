@@ -20,12 +20,13 @@ SHA256: 3d4c1891c13469021f4cbef9d5cdb1ef15da5280025c97501fe4df54c6a69307
 
 Package: com.adskip.wxgame
 Name: 微信小游戏去广告
-Version: 1.0.2
+Version: 1.0.3
 Architecture: iphoneos-arm64
 Description: 跳过微信小游戏里「看广告得奖励」这类广告：奖励直接到账，广告不播放。
  需要越狱（iOS 15 及以上，rootless），仅在 iOS 15.6.1 实测过。
  开关改到桌面上的「小游戏去广告」App 里（配套面板）；旧版在「设置」里提供的那个开关入口已经移除。
  关掉后就是微信原本的样子；只针对小游戏内的激励视频广告，其他类型的广告不受影响。
+ 1.0.3 起，配套面板里能看到它有没有真的拦下广告（不会出现「显示正常、其实没拦到」）。
  微信更新后可能失效，届时会跟进适配。
 Maintainer: Abobo
 Author: Abobo
@@ -35,10 +36,10 @@ Recommends: com.adskip.wxpanel (>= 1.0.1)
 Homepage: https://abobo-win.github.io/wechat-adskip/
 Icon: https://abobo-win.github.io/wechat-adskip/icons/com.adskip.wxgame.png
 Depiction: https://abobo-win.github.io/wechat-adskip/depictions/com.adskip.wxgame.html
-Filename: debs/com.adskip.wxgame_1.0.2_iphoneos-arm64.deb
-Size: 15828
-MD5sum: 0782595d95b95b12ef3568c160534bf0
-SHA256: 979188fd169ca33a401fc04ec12352f6ef07a20550de4fdd4bfa5e81b61b04ed
+Filename: debs/com.adskip.wxgame_1.0.3_iphoneos-arm64.deb
+Size: 18988
+MD5sum: f5ca08883c96859d7a8fd05f4cd99aa2
+SHA256: d0ae5b4469d67eb8e4002ffca3185410ec91b5137b06d2010db86f81d58f24a4
 
 Package: com.adskip.wxgameskip.prefs
 Name: 微信小游戏去广告 · 设置入口
