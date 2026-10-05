@@ -36,18 +36,18 @@ li{margin:6px 0}
 <div class="hd">
   <img src="https://abobo-win.github.io/wechat-adskip/icons/com.adskip.wxgame.png" alt="">
   <div>
-    <h1>微信小游戏去广告<span class="badge">v1.0.3</span></h1>
+    <h1>微信小游戏去广告<span class="badge">v1.0.11</span></h1>
     <p>小游戏里「看广告得奖励」的那些广告，不用再看了</p>
   </div>
 </div>
 
 <h2>基本信息</h2>
 <div class="card"><table>
-<tr><td>版本</td><td>1.0.3</td></tr>
-<tr><td>更新日期</td><td>2026-10-02</td></tr>
+<tr><td>版本</td><td>1.0.11</td></tr>
+<tr><td>更新日期</td><td>2026-10-05</td></tr>
 <tr><td>系统要求</td><td>iOS 15 及以上（越狱环境，rootless）</td></tr>
 <tr><td>实测环境</td><td>iPhone 13 Pro · iOS 15.6.1 · 微信 8.0.72</td></tr>
-<tr><td>设置入口</td><td>桌面上的「小游戏去广告」App（配套面板）</td></tr>
+<tr><td>设置入口</td><td>「设置」→ 小游戏去广告（推荐），或桌面上的「小游戏去广告」App</td></tr>
 <tr><td>价格</td><td>免费</td></tr>
 </table></div>
 
@@ -56,7 +56,8 @@ li{margin:6px 0}
 <li>小游戏里「看广告得奖励 / 看广告复活 / 看广告翻倍」这类广告不再播放，奖励照常到账</li>
 <li>个别小游戏以前可能没跳过（它的广告代码换了个名字那种），1.0.3 起补上了</li>
 <li>面板里能看到它有没有真的拦下广告，不会出现「显示正常、其实没拦到」</li>
-<li>开关在配套的「小游戏去广告」App 里，随时可以关掉；关掉后就是微信原本的样子</li>
+<li>开关在「设置」里的「小游戏去广告」那一页，或桌面 App 里；随时可以关掉，关掉后就是微信原本的样子</li>
+<li>1.0.11 起多了一点点与「关注公众号」有关的判断：默认什么都不查、什么都不打扰；只有你自己在本机放上那个配置文件之后，才会开始只读地看一眼公众号列表</li>
 <li>卸载即恢复，不会在微信里留下改动</li>
 <li>不需要注册、不需要联网验证</li>
 </ul></div>
@@ -65,7 +66,7 @@ li{margin:6px 0}
 <div class="card"><ol>
 <li>确认设备已越狱（iOS 15 及以上，rootless 环境）</li>
 <li>在 Sileo 里安装本插件（源：abobo-win.github.io/wechat-adskip）</li>
-<li>安装配套的「微信小游戏去广告 · 设置面板」，桌面会出现「小游戏去广告」图标</li>
+<li>安装「微信小游戏去广告 · 设置入口」（「设置」里会出现「小游戏去广告」），或桌面上的「小游戏去广告」App</li>
 <li>打开它把开关拨到你要的状态，然后把微信从后台彻底关掉，再重新打开</li>
 </ol></div>
 
@@ -75,10 +76,12 @@ li{margin:6px 0}
 <li>微信更新后可能失效。失效的表现就是「广告又开始播了」——先确认开关是开的、把微信重启一次；还是不行就等适配更新</li>
 <li>不同小游戏的广告流程不完全一样，少数游戏可能拿不到奖励</li>
 <li>个别游戏的开奖结果由服务器判定，这种情况下拿不到奖励属于正常现象</li>
+<li>与关注相关的那一点点判断完全是可选的：不配置就完全不查、也不上报；它只读地看一眼公众号列表，不会做任何别的事</li>
 </ul></div>
 
 <h2>更新日志</h2>
 <div class="card">
+<div class="ver"><b>v1.0.11</b><span>2026-10-05</span></div><div style="padding:0 0 10px;color:var(--sub);font-size:14px">新增与「关注公众号」有关的只读判断：默认什么都不查、什么都不打扰 —— 只有你自己在本机放上那个配置文件之后才会开启；判定结果会如实显示在设置面板里（读不到就报「暂时无法判定」，不会乱猜）</div>
 <div class="ver"><b>v1.0.3</b><span>2026-10-03</span></div><div style="padding:0 0 10px;color:var(--sub);font-size:14px">适配「广告代码换了个名字」的小游戏：个别小游戏以前可能没被接管，这一版补上；同时状态里会明确区分「有没有真的拦下播放」，槽位满了会显式报警，不再静默失效</div>
 <div class="ver"><b>v1.0.2</b><span>2026-10-02</span></div><div style="padding:0 0 10px;color:var(--sub);font-size:14px">修好开关：关掉之后小游戏广告会照常播放（修复上一版「关掉也仍然生效」的问题）；开关改到配套的「小游戏去广告」App 里</div>
 <div class="ver"><b>v1.0.1</b><span>2026-10-02</span></div><div style="padding:0 0 10px;color:var(--sub);font-size:14px">完善源内展示信息（名称 / 描述 / 分类 / 图标），功能不变</div>
